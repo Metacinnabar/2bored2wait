@@ -76,8 +76,9 @@ const askForSecrets = async () => {
 	}
 	if((!config.has("discordBot") || config.get("discordBot")) && !config.has("BotToken")) {
 		canSave = true;
-		discordBotToken = await promisedQuestion("BotToken, leave blank if not using discord []: ");
+		discordBotToken = await promisedQuestion("BotToken, leave blank if not using discord: ");
 		localConf.BotToken = discordBotToken;
+		localConf.notifyUserId = await promisedQuestion("User id for notification pings: ");
 	}
 	localConf.discordBot = discordBotToken === "" ? false : config.has("discordBot") && config.get("discordBot");
 	localConf.discordPrefix = "2b2w ";
@@ -100,24 +101,12 @@ const askForSecrets = async () => {
 		dc.on('ready', () => {
 			dc.user.setActivity("Queue is stopped.");
 			doing = "stopped";
-			fs.readFile(save, "utf8", (err, id) => {
-				if(!err) dc.users.fetch(id).then(user => {
-					dcUser = user;
-				});
-			});
 		});
 
 		dc.on('message', msg => {
 			if (msg.author.username !== dc.user.username) {
 				userInput(msg.content, true, msg);
-				if (dcUser == null || msg.author.id !== dcUser.id) {
-					fs.writeFile(save, msg.author.id, function (err) {
-						if (err) {
-							throw err;
-						}
-				});
 			}
-			dcUser = msg.author;
 		}
 	});
 }
@@ -138,7 +127,6 @@ else {
 
 var stoppedByPlayer = false;
 var timedStart;
-let dcUser; // discord user that controlls the bot
 var totalWaitTime;
 var starttimestring;
 var options;
@@ -258,7 +246,7 @@ function join() {
 							logActivity("P: " + positioninqueue + " E: " + webserver.ETA);
 						}
 						if (config.get("notification.enabled") && positioninqueue <= config.get("notification.queuePlace") && !notisend && config.discordBot && dcUser != null) {
-							sendDiscordMsg(dcUser, "Queue", "The queue is almost finished. You are in Position: " + webserver.queuePlace);
+							sendDiscordMsg(util.readJSON("config/local.json").notifyUserId, "Queue", "The queue is almost finished. You are in Position: " + webserver.queuePlace);
 							notisend = true;
 						}
 					}
