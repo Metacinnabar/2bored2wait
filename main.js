@@ -382,8 +382,8 @@ function activity(string) {
 function userInput(cmd, DiscordOrigin, discordMsg) {
 	cmd = cmd.toLowerCase();
 	var prefix = util.readJSON("config/local.json").discordPrefix;
-	//discordMsg.author.id.toString() !== util.readJSON("config/local.json").notifyUserId
-	if (!cmd.startsWith(prefix))
+	
+	if (!cmd.startsWith(prefix) || discordMsg.author.id.toString() != util.readJSON("config/local.json").notifyUserId)
 		return;
 	
 	switch (cmd.slice(prefix.length)) {
