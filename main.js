@@ -107,9 +107,8 @@ const askForSecrets = async () => {
 			if (msg.author.username !== dc.user.username) {
 				userInput(msg.content, true, msg);
 			}
-		}
-	});
-}
+		});
+	}
 	console.log("Starting 2b2w");
 	cmdInput();
 	joinOnStart();
