@@ -448,7 +448,7 @@ function userInput(cmd, DiscordOrigin, discordMsg) {
 						msg(DiscordOrigin, discordMsg, "Calculating time", "Calculating the time, so you can play at " + starttimestring);
 					break;
 				case "stopped":
-					msg(DiscordOrigin, discordMsg, "Queuing Stopping", "Currently not in queue. Run `" + prefix + "start` to start queuing.);
+					msg(DiscordOrigin, discordMsg, "Queuing Stopping", "Currently not in queue. Run `" + prefix + "start` to start queuing.");
 			}
 			break;
 		case "stop":
