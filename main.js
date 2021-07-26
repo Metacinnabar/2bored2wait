@@ -404,6 +404,8 @@ function userInput(cmd, DiscordOrigin, discordMsg) {
 		case "quit":
 			return process.exit(0);
 
+		case "status":
+		case "queue":
 		case "update":
 			switch (doing) {
 				case "queue":
