@@ -388,9 +388,11 @@ function activity(string) {
 //the discordBot part starts here.
 
 function userInput(cmd, DiscordOrigin, discordMsg) {
-	 cmd = cmd.toLowerCase();
+	cmd = cmd.toLowerCase();
+	var prefix = "2b2w "
 
-	switch (cmd) {
+	if (cmd.startsWith(prefix))
+	switch (cmd.slice(prefix.length)) {
 		case "start":
 			startQueuing();
 			msg(DiscordOrigin, discordMsg, "Queue", "Queue is starting up");
@@ -509,11 +511,7 @@ function sendDiscordMsg(channel, title, content) {
 				value: content
 			}
 			],
-			timestamp: new Date(),
-			footer: {
-				icon_url: dc.user.avatarURL,
-				text: "Author: MrGeorgen"
-			}
+			timestamp: new Date()
 		}
 	});
 }
