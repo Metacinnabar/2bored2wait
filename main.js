@@ -98,6 +98,7 @@ const askForSecrets = async () => {
 		});
 		dc.on('ready', () => {
 			dc.user.setActivity("Queue is stopped.");
+			doing = "stopped";
 			fs.readFile(save, "utf8", (err, id) => {
 				if(!err) dc.users.fetch(id).then(user => {
 					dcUser = user;
@@ -446,6 +447,8 @@ function userInput(cmd, DiscordOrigin, discordMsg) {
 					let calcMsg =
 						msg(DiscordOrigin, discordMsg, "Calculating time", "Calculating the time, so you can play at " + starttimestring);
 					break;
+				case "stopped":
+					msg(DiscordOrigin, discordMsg, "Queuing Stopping", "Currently not in queue.");
 			}
 			break;
 		case "stop":
