@@ -215,6 +215,7 @@ function join() {
 	webserver.isInQueue = true;
 	startAntiAntiAFK(); //for non-2b2t servers
 	activity("Starting the queue...");
+	console.log("Starting the queue...");
 	client.on("packet", (data, meta) => { // each time 2b2t sends a packet
 		switch (meta.name) {
 			case "playerlist_header":
@@ -244,7 +245,7 @@ function join() {
 						} else {
 							logActivity("P: " + positioninqueue + " E: " + webserver.ETA);
 						}
-						if (config.get("notification.enabled") && positioninqueue <= config.get("notification.queuePlace") && !notisend && config.discordBot && dcUser != null) {
+						if (config.get("notification.enabled") && positioninqueue <= config.get("notification.queuePlace") && !notisend && config.discordBot) {
 							sendDiscordMsg(util.readJSON("config/local.json").notifyUserId, "Queue", "The queue is almost finished. You are in Position: " + webserver.queuePlace);
 							notisend = true;
 						}
@@ -505,6 +506,7 @@ function sendDiscordMsg(channel, title, content) {
 			timestamp: new Date()
 		}
 	});
+	console.log("Discord message issued with the title of \'" + title + "\'"
 }
 
 function timeStringtoDateTime(time) {
