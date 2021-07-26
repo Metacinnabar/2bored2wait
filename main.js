@@ -80,6 +80,7 @@ const askForSecrets = async () => {
 		localConf.BotToken = discordBotToken;
 	}
 	localConf.discordBot = discordBotToken === "" ? false : config.has("discordBot") && config.get("discordBot");
+	localConf.discordPrefix = "2b2w ";
 
 	if(canSave) {
 
@@ -390,7 +391,7 @@ function activity(string) {
 
 function userInput(cmd, DiscordOrigin, discordMsg) {
 	cmd = cmd.toLowerCase();
-	var prefix = "2b2w "
+	var prefix = util.readJSON("config/local.json").discordPrefix;
 
 	if (cmd.startsWith(prefix))
 	switch (cmd.slice(prefix.length)) {
