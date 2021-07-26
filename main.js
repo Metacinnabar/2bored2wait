@@ -506,7 +506,7 @@ function sendDiscordMsg(channel, title, content) {
 			timestamp: new Date()
 		}
 	});
-	console.log("Discord message issued with the title of \'" + title + "\'"
+	console.log("Discord message issued with the title of \'" + title + "\'");
 }
 
 function timeStringtoDateTime(time) {
