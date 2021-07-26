@@ -173,6 +173,7 @@ function cmdInput() {
 
 // function to disconnect from the server
 function stop() {
+	console.log("Disconnected from the server... probably due to an error...");
 	webserver.isInQueue = false;
 	finishedQueue = !config.minecraftserver.is2b2t;
 	webserver.queuePlace = "None";
@@ -192,6 +193,7 @@ function stop() {
 function startQueuing() {
 	stopQueing();
 	doing = "auth";
+	console.log("Authenticating...");
 	if (config.get("minecraftserver.onlinemode")) {
 		options.username = mc_username;
 		options.password = mc_password;
@@ -215,7 +217,7 @@ function join() {
 	webserver.isInQueue = true;
 	startAntiAntiAFK(); //for non-2b2t servers
 	activity("Starting the queue...");
-	console.log("Starting the queue...");
+	console.log("Joining the queue...");
 	client.on("packet", (data, meta) => { // each time 2b2t sends a packet
 		switch (meta.name) {
 			case "playerlist_header":
