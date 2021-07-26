@@ -252,7 +252,7 @@ function join() {
 						server.motd = `Place in queue: ${webserver.queuePlace} ETA: ${webserver.ETA}`; // set the MOTD because why not
 						webserver.ETA = Math.floor(ETAmin / 60) + "h " + Math.floor(ETAmin % 60) + "m";
 						if (config.get("userStatus")) { //set the Discord Activity
-							logActivity("P: " + positioninqueue + " E: " + webserver.ETA + " - " + localConf.username);
+							logActivity("P: " + positioninqueue + " E: " + webserver.ETA + " - " + client.username);
 						} else {
 							logActivity("P: " + positioninqueue + " E: " + webserver.ETA);
 						}
