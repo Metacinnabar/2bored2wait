@@ -379,9 +379,10 @@ function activity(string) {
 function userInput(cmd, DiscordOrigin, discordMsg) {
 	cmd = cmd.toLowerCase();
 	var prefix = util.readJSON("config/local.json").discordPrefix;
-
-	//if (!cmd.startsWith(prefix) || discordMsg.author.id !== util.readJSON("config/local.json").notifyUserId)
-	//	return;
+	//discordMsg.author.id.toString() !== util.readJSON("config/local.json").notifyUserId
+	if (!cmd.startsWith(prefix))
+		return;
+	
 	switch (cmd.slice(prefix.length)) {
 		case "start":
 			startQueuing();
