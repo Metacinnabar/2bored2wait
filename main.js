@@ -380,7 +380,8 @@ function userInput(cmd, DiscordOrigin, discordMsg) {
 	cmd = cmd.toLowerCase();
 	var prefix = util.readJSON("config/local.json").discordPrefix;
 
-	if (cmd.startsWith(prefix))
+	if (!cmd.startsWith(prefix) || DiscordOrigin != util.readJSON("config/local.json").notifyUserId))
+		return;
 	switch (cmd.slice(prefix.length)) {
 		case "start":
 			startQueuing();
