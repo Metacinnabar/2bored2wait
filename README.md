@@ -64,24 +64,16 @@ Please optain all required items
 
 ## Installation
 
-### x86 and x64 (most home computers):
+Read the code to ensure I'm not stealing your credentials. I'm not, but you shouldn't take my word for it. If you don't know how to read it, downloading stuff off the internet and giving it your password is probably a bad idea anyway.
 
-1. Read the code to ensure I'm not stealing your credentials. I'm not, but you shouldn't take my word for it. If you don't know how to read it, downloading stuff off the internet and giving it your password is probably a bad idea anyway.
-2. Download the executable [here](https://github.com/themoonisacheese/2bored2wait/releases/latest)
-3. (Optional) Take a look at `config/default.json`, edit your values and place the config under `Home directory of your user/.2bored2wait/config/local.json`
+### Installing via bash
 
-### Other Platforms (including ARM / Raspberry Pi):
-
-1. Download and install node.js version 14 or above and git. You need git even if you download the repository as zip because it is to install the dependencies via npm.
-2. Open a terminal then clone this repo then cd into folder:
-
-```sh
- git clone https://github.com/themoonisacheese/2bored2wait
- cd 2bored2wait
+```bash
+git clone https://github.com/GoodPro712/2bored2wait && cd 2bored2wait
+nano ./config/default.json
+npm install
+npm start
 ```
-
-3. Run `npm install` to install te required libraries
-4. Start the program with `npm start`.
 
 ### Docker
 
