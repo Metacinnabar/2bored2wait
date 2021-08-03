@@ -4,22 +4,16 @@
 [![Issues][issues-shield]][issues-url]
 [![Donate][donate-shield]][donate-url]
 
-<!-- PROJECT LOGO -->
-</br>
-<div align="center">
-
-<a href="#readme.md"><img align="center" src="images/logo.png" alt="Logo" width="80" height="80"><a>
-
 ### 2bored2wait
 
+[Fork of original with my personal improvements](https://github.com/themoonisacheese/2bored2wait)\
 A proxy to wait out 2b2t.org's way too long queue. Includes a small webserver a REST-like API for external control
 
 [Report Bug](https://github.com/themoonisacheese/2bored2wait/issues) | [Request Feature](https://github.com/themoonisacheese/2bored2wait/issues)
 
-</div>
-
+<br>
 <!-- TABLE OF CONTENTS -->
-<details open="open">
+<details closed="closed">
 <summary>Table of Contents</summary><p>
 
 1. [About The Project](#about-the-project)
