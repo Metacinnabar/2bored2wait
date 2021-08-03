@@ -6,7 +6,7 @@
 
 ### 2bored2wait
 
-[Fork of original with my personal improvements](https://github.com/themoonisacheese/2bored2wait)\
+[This is a fork of the original with my personal improvements](https://github.com/themoonisacheese/2bored2wait)\
 A proxy to wait out 2b2t.org's way too long queue. Includes a small webserver a REST-like API for external control
 
 [Report Bug](https://github.com/themoonisacheese/2bored2wait/issues) | [Request Feature](https://github.com/themoonisacheese/2bored2wait/issues)
