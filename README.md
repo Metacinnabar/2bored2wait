@@ -1,8 +1,8 @@
 [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![Donate][donate-shield]][donate-url]
+[![GitHub][license-badge]][license-url]
+[![CodeFactor][codefactor-badge]][codefactor-url]
 
 ### 2bored2wait
 
@@ -11,8 +11,6 @@ A proxy to wait out 2b2t.org's way too long queue. Includes a small webserver a 
 
 [Report Bug](https://github.com/themoonisacheese/2bored2wait/issues) | [Request Feature](https://github.com/themoonisacheese/2bored2wait/issues)
 
-<br>
-<!-- TABLE OF CONTENTS -->
 <details closed="closed">
 <summary>Table of Contents</summary><p>
 
@@ -34,15 +32,26 @@ A proxy to wait out 2b2t.org's way too long queue. Includes a small webserver a 
 
 ## About The Project
 
-A proxy to wait out 2b2t.org's way too long queue.  
-Please Note that because of security reasons this tool doesn't auto-update! Also 2b2w does not show ETA from 2b2t.  
+A proxy to wait out 2b2t.org's way too long queue.
 The ETA is calculated based on position in the queue. This results in better ETA most of the time.
 
 ### Built With
 
-- Node
-- Npm
-- HTML
+- [Node](https://nodejs.org)
+- [Npm](https://npmjs.com)
+- [Mc Proxy](https://www.npmjs.com/package/@rob9315/mcproxy)
+- [Boxen](https://www.npmjs.com/package/boxen)
+- [Config](https://www.npmjs.com/package/config)
+- [Discord.js](https://www.npmjs.com/package/discord.js)
+- [Everpolate](https://www.npmjs.com/package/everpolate)
+- [Luxon](https://www.npmjs.com/package/luxon)
+- [Minecraft Protocol](https://www.npmjs.com/package/minecraft-protocol)
+- [Mineflayer AntiAFK](https://www.npmjs.com/package/mineflayer-antiafk)
+- [Node Json Minify](https://www.npmjs.com/package/node-json-minify)
+- [Open](https://www.npmjs.com/package/open)
+- [Particles.js](https://www.npmjs.com/package/particles.js)
+- [RSS Parser](https://www.npmjs.com/package/rss-parser)
+- [Nexe](https://www.npmjs.com/package/nexe)
 
 <!-- GETTING STARTED -->
 
@@ -130,24 +139,20 @@ Contributions are what make the open source community such an amazing place to b
 
 ## License
 
-Distributed under the GPL-3.0 License. See `LICENSE` for more information.
+Distributed under the GPL-3.0 License. See [`LICENSE`][license-url] for more information.
 
 <!-- ACKNOWLEDGEMENTS -->
-
-# Testing
-
-- Run NPM test to run test.js
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/themoonisacheese/2bored2wait.svg?style=for-the-badge
-[contributors-url]: https://github.com/themoonisacheese/2bored2wait/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/themoonisacheese/2bored2wait.svg?style=for-the-badge
-[forks-url]: https://github.com/themoonisacheese/2bored2wait/network/members
-[stars-shield]: https://img.shields.io/github/stars/themoonisacheese/2bored2wait.svg?style=for-the-badge
-[stars-url]: https://github.com/themoonisacheese/2bored2wait/stargazers
-[issues-shield]: https://img.shields.io/github/issues/themoonisacheese/2bored2wait.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/goodpro712/2bored2wait.svg
+[contributors-url]: https://github.com/goodpro712/2bored2wait/graphs/contributors
+[issues-shield]: https://img.shields.io/github/issues/themoonisacheese/2bored2wait.svg
 [issues-url]: https://github.com/themoonisacheese/2bored2wait/issues
-[donate-shield]: https://img.shields.io/badge/Donate-PayPal-green.svg?style=for-the-badge
+[donate-shield]: https://img.shields.io/badge/donate-paypal-green.svg
 [donate-url]: https://paypal.me/themoonisacheese?locale.x=fr_FR
+[codefactor-badge]: https://www.codefactor.io/repository/github/goodpro712/2bored2wait/badge
+[codefactor-url]: https://www.codefactor.io/repository/github/goodpro712/2bored2wait
+[license-badge]: https://img.shields.io/github/license/goodpro712/2bored2wait 
+[license-url]: https://github.com/GoodPro712/2bored2wait/blob/master/LICENSE
